@@ -2,95 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Professional Pest Control</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pest Control Services</title>
   <style>
+    /* 整体背景样式 */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background: #000;
-    }
-    .hero {
+      padding: 0;
+      background-image: url('img_112.jpg'); /* 默认第一张 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       height: 100vh;
-      background: url('your-hunting-photo.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      transition: background-image 1s ease-in-out; /* 背景切换过渡 */
+    }
+
+    /* 内容居中 */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      background-blend-mode: multiply;
-      background-color: rgba(0,0,0,0.5);
     }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
+
+    .content h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 1em;
+
+    .content p {
+      font-size: 24px;
+      margin: 10px 0;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
     }
+
+    /* 按钮样式 */
     .btn {
-      padding: 12px 24px;
-      border: 1px solid #fff;
-      color: #fff;
+      padding: 12px 25px;
+      background-color: rgba(255,255,255,0.3);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 8px;
       text-decoration: none;
-      margin: 0 8px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-      color: #ddd;
-    }
-    video {
-      width: 100%;
       margin-top: 20px;
-      border: 1px solid #333;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(255,255,255,0.6);
     }
   </style>
 </head>
-
 <body>
-
-<div class="hero">
-  <div>
+  <div class="content">
     <h1>Professional Firearms Pest Control</h1>
-    <p>Licensed • Ethical • Effective</p>
-    <a class="btn" href="#contact">Request a Call</a>
-    <a class="btn" href="#footage">View Thermal Footage</a>
+    <p>Safe, effective, and precise.</p>
+    <a href="mailto:your.email@example.com" class="btn">Contact Us</a>
   </div>
-</div>
 
-<section id="footage">
-  <h2>Thermal & Night Operations</h2>
-  <p>All footage shown is from licensed pest control operations conducted in compliance with local regulations.</p>
-  <video controls>
-    <source src="thermal-video.mp4" type="video/mp4">
-  </video>
-</section>
-
-<section>
-  <h2>What We Do</h2>
-  <p>
-    Targeted vertebrate pest control services for rural landowners and property managers.
-    Humane, effective, and outcome-focused.
-  </p>
-</section>
-
-<section>
-  <h2>Compliance & Licensing</h2>
-  <p>
-    Fully licensed firearms operator.<br>
-    R Licence – Vertebrate Pest Control.<br>
-    All activities conducted with landholder permission and in accordance with state legislation.
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: 04xx xxx xxx</p>
-</section>
-
+  <script>
+    // 背景轮播
+    const images = ['img_112.jpg', 'Number 1.jpg', '1000005379.jpg'];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % images.length;
+      document.body.style.backgroundImage = `url('${images[i]}')`;
+    }, 5000); // 每5秒切换
+  </script>
 </body>
 </html>
